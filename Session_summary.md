@@ -36,7 +36,7 @@ Read and understand the provided [paper](https://www.cv-foundation.org/openacces
 - ***Model structure***: A normalized version of 16 convolutional and 5 pooling layers of the VGG19 network and no usage of fully connected layers. The normalization is achieved by re-scaling the mean activation of each convolutional filter over images and positions to 1.
 - ***Content representation***:
     - Pass the content image through the CNN to extract its content features. This typically involves selecting one or more intermediate layers in the network to capture the content.
-    - The collection of feature maps of $l-th$ layer is represented as matrix $F^l \in \mathcal{R}^{N_{l}xM_{l}}$, where $N_l$ is number of filters and $M_l$ is size of flatterned feature map.
+    - The collection of feature maps of $l-th$ layer is represented as matrix $F^l \in \mathcal{R}^{N_{l} \times M_{l}}$, where $N_l$ is number of filters and $M_l$ is size of flatterned feature map.
 
 - ***Style reperesentaion***:
     - Pass the style image through the CNN to extract its style features. These features are obtained by calculating the correlations between feature maps at different layers.
