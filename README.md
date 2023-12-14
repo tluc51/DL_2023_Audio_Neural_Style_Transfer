@@ -17,18 +17,27 @@ The brief description for each file is shown in the table below:
 |shallow_net|contain notebook of Shallow-net based approach|
 |data|audio/image input data|
 |output|output audios from Shallow net|
+|DL_final.pdf|presentation slides of the topic|
 
 </td></tr> </table>
 
-## 1. Bibliography and Tutorial
-The original work for Image Style Transfer was introduced by [Leon A. Gatys et al.](https://arxiv.org/pdf/1508.06576.pdf) and its implementation is given in [this tutorial.](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
+## 1. Neural Style Transfer
+The objective of Neural Style Transfer is to generate artistic image by transferring the style from one image (style image) onto another (content image).
+
+The original work for Image Style Transfer was introduced by [Leon A. Gatys et al.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) and its implementation is given in [this tutorial.](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
 
 ## 2. Audio Style Transfer
 ### 2.1. Introduction
-In this project, we have considered three different neural style transfer scheme for audio application:
+The idea of Neural Style Transfer is applide on audio application. More precisely, we study the capability of instrument stylization using the same architecture (i.e. CNN). The process is illustrated by the figure below (we can replace **Shallow net** by other models).
+
+![Audio Style Transfer algorithm](images/audio_style_transfer.png)
+
+In this project, we have considered three different neural style transfer schemes for audio application:
 - Vggish: [paper](https://arxiv.org/pdf/1609.09430.pdf), [github]()
 - CNN14_16k: [paper](https://arxiv.org/pdf/1912.10211.pdf), [github](https://github.com/qiuqiangkong/audioset_tagging_cnn)
 - Shallow net: [paper](https://hal.science/hal-01626389/document)
+
+More information can be found in our presentation slides.
 
 ### 2.2. Result
 Among three candidates, Shallow net (with 1D-kernel CNN) outperforms the others. Furthermore, this approach does not need pretrained weights and it executes rapidly thanks to its shallow architecture. Some results can be found in [this folder](output).
